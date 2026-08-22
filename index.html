@@ -1,0 +1,612 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>W B Electrics | Electrical Contractor | OC & LA Counties</title>
+
+  <meta name="description" content="W B Electrics provides residential, commercial and industrial electrical services, troubleshooting, repairs, upgrades, access control installation and 24-hour emergency electrical service throughout Orange County and Los Angeles County.">
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: #101010;
+      color: #ffffff;
+      line-height: 1.6;
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+    header {
+      background: #050505;
+      border-bottom: 4px solid #f2b705;
+      padding: 20px;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .nav {
+      max-width: 1150px;
+      margin: auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .brand {
+      font-size: 30px;
+      font-weight: 900;
+      color: #ffffff;
+      letter-spacing: 1px;
+    }
+
+    .brand span {
+      color: #f2b705;
+    }
+
+    .top-phone {
+      background: #f2b705;
+      color: #000000;
+      padding: 12px 20px;
+      border-radius: 6px;
+      font-weight: bold;
+      font-size: 18px;
+    }
+
+    .hero {
+      min-height: 610px;
+      display: flex;
+      align-items: center;
+      text-align: center;
+      background:
+        linear-gradient(rgba(0,0,0,.72), rgba(0,0,0,.82)),
+        radial-gradient(circle at top, #404040, #101010 65%);
+      padding: 80px 20px;
+    }
+
+    .hero-content {
+      max-width: 950px;
+      margin: auto;
+    }
+
+    .eyebrow {
+      color: #f2b705;
+      font-weight: bold;
+      font-size: 18px;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      margin-bottom: 15px;
+    }
+
+    .hero h1 {
+      font-size: clamp(44px, 8vw, 82px);
+      line-height: 1;
+      margin-bottom: 18px;
+    }
+
+    .hero h2 {
+      font-size: clamp(22px, 4vw, 38px);
+      color: #f2b705;
+      margin-bottom: 20px;
+    }
+
+    .hero p {
+      max-width: 800px;
+      margin: auto;
+      font-size: 20px;
+      color: #dddddd;
+    }
+
+    .buttons {
+      margin-top: 35px;
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 15px 28px;
+      border-radius: 6px;
+      font-size: 18px;
+      font-weight: bold;
+    }
+
+    .btn-primary {
+      background: #f2b705;
+      color: #000000;
+    }
+
+    .btn-secondary {
+      border: 2px solid #ffffff;
+      color: #ffffff;
+    }
+
+    .emergency {
+      background: #b30000;
+      text-align: center;
+      padding: 18px 20px;
+      font-weight: bold;
+      font-size: 21px;
+    }
+
+    section {
+      padding: 75px 20px;
+    }
+
+    .container {
+      max-width: 1150px;
+      margin: auto;
+    }
+
+    .section-title {
+      text-align: center;
+      margin-bottom: 45px;
+    }
+
+    .section-title h2 {
+      font-size: 38px;
+      margin-bottom: 10px;
+    }
+
+    .section-title p {
+      color: #bdbdbd;
+      font-size: 18px;
+      max-width: 750px;
+      margin: auto;
+    }
+
+    .services {
+      background: #181818;
+    }
+
+    .service-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
+    }
+
+    .card {
+      background: #242424;
+      padding: 30px;
+      border-radius: 8px;
+      border-top: 4px solid #f2b705;
+    }
+
+    .card h3 {
+      color: #f2b705;
+      font-size: 23px;
+      margin-bottom: 12px;
+    }
+
+    .card p {
+      color: #d6d6d6;
+    }
+
+    .about {
+      background: #0f0f0f;
+    }
+
+    .about-box {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 45px;
+      align-items: center;
+    }
+
+    .about h2 {
+      font-size: 38px;
+      margin-bottom: 20px;
+    }
+
+    .about p {
+      color: #d5d5d5;
+      margin-bottom: 17px;
+      font-size: 18px;
+    }
+
+    .license-box {
+      background: #202020;
+      border-left: 5px solid #f2b705;
+      padding: 30px;
+      border-radius: 6px;
+    }
+
+    .license-box h3 {
+      font-size: 27px;
+      margin-bottom: 15px;
+      color: #f2b705;
+    }
+
+    .license-box p {
+      margin-bottom: 8px;
+    }
+
+    .access {
+      background: #181818;
+    }
+
+    .access-list {
+      max-width: 850px;
+      margin: 30px auto 0;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px 30px;
+    }
+
+    .access-item {
+      background: #252525;
+      padding: 14px 18px;
+      border-radius: 5px;
+    }
+
+    .access-item::before {
+      content: "✓ ";
+      color: #f2b705;
+      font-weight: bold;
+    }
+
+    .contact {
+      text-align: center;
+      background: #050505;
+    }
+
+    .contact h2 {
+      font-size: 42px;
+      margin-bottom: 12px;
+    }
+
+    .contact .number {
+      color: #f2b705;
+      font-weight: 900;
+      font-size: clamp(34px, 6vw, 58px);
+      display: block;
+      margin: 25px 0;
+    }
+
+    .contact p {
+      font-size: 19px;
+      color: #d5d5d5;
+      max-width: 750px;
+      margin: auto;
+    }
+
+    footer {
+      background: #000000;
+      color: #a8a8a8;
+      text-align: center;
+      padding: 30px 20px;
+      border-top: 1px solid #333333;
+    }
+
+    footer strong {
+      color: #ffffff;
+    }
+
+    @media (max-width: 850px) {
+      .service-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .about-box {
+        grid-template-columns: 1fr;
+      }
+
+      .access-list {
+        grid-template-columns: 1fr;
+      }
+
+      .nav {
+        flex-direction: column;
+      }
+
+      header {
+        position: relative;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <div class="nav">
+    <div class="brand">W B <span>ELECTRICS</span></div>
+
+    <a class="top-phone" href="tel:7143912085">
+      CALL 714-391-2085
+    </a>
+  </div>
+</header>
+
+
+<section class="hero">
+  <div class="hero-content">
+
+    <div class="eyebrow">
+      Residential • Commercial • Industrial
+    </div>
+
+    <h1>W B ELECTRICS</h1>
+
+    <h2>Professional Electrical Contractor</h2>
+
+    <p>
+      Electrical troubleshooting, repairs, wiring, upgrades,
+      installation, maintenance and commercial access control
+      services throughout Orange County and Los Angeles County.
+    </p>
+
+    <div class="buttons">
+
+      <a class="btn btn-primary" href="tel:7143912085">
+        Call 714-391-2085
+      </a>
+
+      <a class="btn btn-secondary" href="#services">
+        View Our Services
+      </a>
+
+    </div>
+  </div>
+</section>
+
+
+<div class="emergency">
+  24-HOUR EMERGENCY ELECTRICAL SERVICE • FAST RESPONSE • OC & LA COUNTIES
+</div>
+
+
+<section class="services" id="services">
+
+  <div class="container">
+
+    <div class="section-title">
+      <h2>Electrical Services</h2>
+
+      <p>
+        Full-service electrical troubleshooting, repair, installation
+        and maintenance for residential, commercial and industrial properties.
+      </p>
+    </div>
+
+
+    <div class="service-grid">
+
+      <div class="card">
+        <h3>Electrical Repairs</h3>
+        <p>
+          Troubleshooting wiring problems, power failures, faulty electrical
+          equipment and damaged electrical components.
+        </p>
+      </div>
+
+
+      <div class="card">
+        <h3>Wiring & Upgrades</h3>
+        <p>
+          Electrical wiring installation and upgrades for existing buildings,
+          remodels, equipment and electrical systems.
+        </p>
+      </div>
+
+
+      <div class="card">
+        <h3>Commercial Electrical</h3>
+        <p>
+          Electrical service, troubleshooting, repairs and maintenance
+          for commercial properties and business facilities.
+        </p>
+      </div>
+
+
+      <div class="card">
+        <h3>Industrial Electrical</h3>
+        <p>
+          Inspection, troubleshooting and repair of electrical equipment
+          and power systems in industrial environments.
+        </p>
+      </div>
+
+
+      <div class="card">
+        <h3>Electrical Maintenance</h3>
+        <p>
+          Preventive electrical maintenance, inspections and replacement
+          of faulty components to help keep electrical systems operating safely.
+        </p>
+      </div>
+
+
+      <div class="card">
+        <h3>24-Hour Emergency Service</h3>
+        <p>
+          Fast-response emergency electrical repair service available
+          throughout Orange County and Los Angeles County.
+        </p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<section class="access">
+
+  <div class="container">
+
+    <div class="section-title">
+
+      <h2>Commercial Access Control Installation</h2>
+
+      <p>
+        Professional electrical wiring and installation for commercial
+        controlled-entry and access-control systems.
+      </p>
+
+    </div>
+
+
+    <div class="access-list">
+
+      <div class="access-item">
+        Card Reader Systems
+      </div>
+
+      <div class="access-item">
+        Key-Fob Entry Systems
+      </div>
+
+      <div class="access-item">
+        Keypad Entry Systems
+      </div>
+
+      <div class="access-item">
+        Electric Door Strikes
+      </div>
+
+      <div class="access-item">
+        Magnetic Door Locks
+      </div>
+
+      <div class="access-item">
+        Request-to-Exit Devices
+      </div>
+
+      <div class="access-item">
+        Access Control Power Supplies
+      </div>
+
+      <div class="access-item">
+        Access Control Wiring
+      </div>
+
+      <div class="access-item">
+        Troubleshooting & Repairs
+      </div>
+
+      <div class="access-item">
+        Commercial Door & Gate Connections
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+
+<section class="about">
+
+  <div class="container">
+
+    <div class="about-box">
+
+      <div>
+
+        <h2>About W B Electrics</h2>
+
+        <p>
+          Our service electricians respond to requests for electrical repairs,
+          upgrades and troubleshooting. We install wiring in existing buildings
+          and repair or replace faulty electrical components.
+        </p>
+
+        <p>
+          W B Electrics provides professional electrical contracting services
+          designed to help keep residential, commercial and industrial
+          electrical systems safe, reliable and operating properly.
+        </p>
+
+        <p>
+          We provide code-compliant electrical expertise and professional
+          workmanship throughout Orange County and Los Angeles County.
+        </p>
+
+      </div>
+
+
+      <div class="license-box">
+
+        <h3>Licensed • Bonded • Insured</h3>
+
+        <p><strong>California C-10 Electrical Contractor</strong></p>
+
+        <p><strong>CSLB License #1034865</strong></p>
+
+        <p>Bonded in the State of California</p>
+
+        <p>Liability Insurance</p>
+
+        <p>Residential • Commercial • Industrial</p>
+
+        <p>24-Hour Emergency Electrical Service</p>
+
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+
+<section class="contact" id="contact">
+
+  <div class="container">
+
+    <h2>Need an Electrician?</h2>
+
+    <p>
+      For electrical repairs, troubleshooting, installations, upgrades,
+      commercial access control or emergency electrical service,
+      contact W B Electrics.
+    </p>
+
+    <a class="number" href="tel:7143912085">
+      714-391-2085
+    </a>
+
+    <a class="btn btn-primary" href="tel:7143912085">
+      CALL W B ELECTRICS NOW
+    </a>
+
+  </div>
+</section>
+
+
+<footer>
+
+  <p>
+    <strong>W B Electrics</strong> |
+    Residential • Commercial • Industrial
+  </p>
+
+  <p>
+    California C-10 Electrical Contractor |
+    CSLB License #1034865
+  </p>
+
+  <p>
+    Orange County & Los Angeles County |
+    714-391-2085
+  </p>
+
+</footer>
+
+</body>
+</html>
